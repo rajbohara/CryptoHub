@@ -10,3 +10,11 @@
 .main {
     flex: 1;   /* baaki sab elemwnts apne content ke hisaab se size lenge aur bacha hua ise mil jayega */
 }
+html, body {
+  width: 100vw;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
