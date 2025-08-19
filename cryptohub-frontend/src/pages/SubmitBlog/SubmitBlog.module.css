@@ -1,0 +1,140 @@
+.wrapper {
+    min-height: 100vh;
+    background: #0d0d0d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Inter", sans-serif;
+    padding: 0 8px;
+  }
+  
+  .card {
+    background: rgba(13, 13, 13, 0.88);
+    border: 1.5px solid rgba(255, 255, 255, 0.10);
+    border-radius: 24px;
+    box-shadow: 0 10px 32px rgba(0,0,0,0.48);
+    padding: 44px 36px 36px 36px;
+    min-width: 320px;
+    max-width: 440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .header {
+    font-size: 2.1rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 32px;
+    background: linear-gradient(90deg, #ff6b6b, #f06595);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+  }
+  
+  .input {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  
+  .content {
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+    margin-bottom: 18px;
+    outline: none;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255,255,255,0.12);
+    font-size: 1.08rem;
+    min-height: 120px;
+    background: rgba(20, 20, 20, 0.85);
+    color: #fff;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    resize: vertical;
+  }
+  
+  .content:focus {
+    border: 1.5px solid #ff6b6b;
+    box-shadow: 0 0 0 2px rgba(255,107,107,0.12);
+  }
+  
+  .photoPrompt {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 18px;
+    color: #bbb;
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .photoPrompt input[type="file"] {
+    color: #fff;
+    background: transparent;
+    border: none;
+    max-width: 180px;
+  }
+  
+  .previewImg {
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    margin-left: 10px;
+    object-fit: cover;
+    background: #181818;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .submit {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 14px;
+    padding: 15px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 18px;
+    box-shadow: 0 4px 16px rgba(255, 107, 107, 0.10);
+    transition: background 0.2s, transform 0.2s;
+  }
+  
+  .submit:disabled {
+   background: linear-gradient(45deg, #ff6b6b, #f06595);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 600px) {
+    .card {
+      padding: 20px 4vw 18px 4vw;
+      min-width: 0;
+      width: 100vw;
+      max-width: 99vw;
+    }
+    .header {
+      font-size: 1.3rem;
+    }
+    .content {
+      font-size: 1rem;
+      padding: 0.8rem 0.7rem;
+      min-height: 80px;
+    }
+    .photoPrompt {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.98rem;
+    }
+    .previewImg {
+      margin-left: 0;
+      margin-top: 8px;
+      width: 54px;
+      height: 54px;
+    }
+  }

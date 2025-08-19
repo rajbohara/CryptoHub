@@ -1,0 +1,149 @@
+body {
+  overflow-x: hidden;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  
+  width: 95%;              /* not 100% → keeps it contained */
+  max-width: 1200px;       /* aligns with cards/news */
+  margin: 10px auto;       /* centers it */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.8rem 1rem;
+
+  background: rgba(15, 23, 42, 0.7); /* dark glass effect */
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.logo, .nav-links li, .signout-btn {
+  background: transparent !important;
+}
+
+/* Logo */
+.logo {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Nav Links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
+   background: transparent; 
+ 
+}
+
+.activeStyle {
+    color: #ff5479; /* same as Trending News */
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: bold;
+  padding-bottom: 3px;
+  background: transparent !important;
+}
+
+.inActiveStyle {
+  text-decoration: none;
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: bold;
+  color: #e2e8f0;
+  transition: color 0.3s ease;
+  background: transparent !important;
+}
+
+.inActiveStyle:hover {
+
+  color: #ff6b6b; /* fallback solid color */
+}
+
+/* Buttons */
+.signUpButton {
+  background-color: #ff5479;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: clamp(16px, 2vw, 20px);
+  transition: background 0.3s ease;
+}
+
+.signUpButton:hover {
+  background-color: #ff6b6b;
+}
+
+.signOutButton {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: clamp(16px, 2vw, 20px);
+  transition: background 0.3s ease;
+}
+
+.signOutButton:hover {
+  background-color: #ff5479;
+}
+
+/* Hamburger Menu (mobile) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+@media screen and (max-width: 768px) {
+  .navLinks {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 75%;
+    height: calc(100vh - 70px);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.95);
+    padding-top: 2rem;
+    gap: 2rem;
+
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: hidden; /* just to be extra safe */
+  }
+
+  .navLinks.open {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.separator {
+  height: 1px;
+  margin-top: 5px;
+  background: linear-gradient(to right, transparent, #9ba3c2, transparent);
+}

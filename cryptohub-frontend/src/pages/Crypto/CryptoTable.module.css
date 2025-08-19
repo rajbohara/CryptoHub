@@ -1,0 +1,145 @@
+/* Toggle */
+.toggleBar {
+  display: inline-flex;
+  gap: 8px;
+  margin: 10px 0 20px;
+  background: #111;
+  padding: 6px;
+  border-radius: 9999px;
+}
+
+.toggleBtn {
+  border: none;
+  background: transparent;
+  padding: 8px 14px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font: 600 14px/1 "Inter", sans-serif;
+  color: #bbb;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.toggleBtn:hover {
+  color: #fff;
+}
+
+.active {
+  background: #222;
+  color: #fff;
+}
+
+/* Table */
+.tableWrap {
+  width: 100%;
+  overflow-x: hidden; /* 🚫 no horizontal scroll */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  table-layout: auto; /* ✅ lets table shrink */
+}
+
+/* Header row */
+.table thead th {
+  text-align: left;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  background: #ff4c8b; /* ✅ pink header */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* Table body */
+.table tbody td {
+  padding: 12px 16px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 15px;
+  white-space: nowrap; /* prevent breaking but allow shrinking */
+}
+
+/* Cells */
+.rankCell {
+  color: #aaa;
+  font-weight: 600;
+  text-align: center;
+}
+
+.coinCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.coinText {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.symbol {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+/* 24h change */
+.positive {
+  color: #16c784;
+  font-weight: 700;
+}
+
+.negative {
+  color: #ea3943;
+  font-weight: 700;
+}
+
+/* ✅ Responsive tweaks */
+@media (max-width: 768px) {
+  .table thead th,
+  .table tbody td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .logo {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table thead th,
+  .table tbody td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .name {
+    font-size: 13px;
+  }
+  .symbol {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,161 @@
+.blogPage {
+  background: #000;
+  color: #f1f1f1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Blog Post Section */
+.postSection {
+  flex: 2;
+  background: #000;
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.coverImage img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.editButton,
+.deleteButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+
+.editButton {
+ color: white;
+    background: transparent;
+    border: 1px solid #f06595;
+    border-radius: 8px;
+    padding: 5px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.editButton:hover {
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: #fff;
+}
+
+.deleteButton {
+ color: white;
+    background: transparent;
+    border: 1px solid #ff6b6b;
+    border-radius: 8px;
+    padding: 5px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.deleteButton:hover {
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: #fff;
+}
+
+/* Comments Section */
+.commentsSection {
+  flex: 1;
+  
+  background: #000;
+  
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.commentsTitle {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.postComment {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  font-size: 1rem;
+  color: #f1f1f1;
+  background: #1a1a1a;
+}
+
+.postCommentButton {
+  background: linear-gradient(45deg, #ff6b6b, #f06595);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.postCommentButton:hover {
+  background: #ff4d76;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .postSection,
+  .commentsSection {
+    width: 100%;
+  }
+}
