@@ -159,3 +159,22 @@
     width: 100%;
   }
 }
+/* Add or update in BlogDetails.module.css */
+
+@media (max-width: 600px) {
+  .postComment {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .input,
+  .postCommentButton {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  .postCommentButton {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}
